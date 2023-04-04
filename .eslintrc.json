@@ -6,11 +6,11 @@
         "plugin:jsx-ally/recommended",
         "prettier"
     ],
-    "plugins": [],
     "rules": {
         "react/prop-types": 0,
         "react/react-jsx-in-scope": 0
     },
+    "plugins": ["react", "import", "jsx-a11y"],
     "parserOptions": {
         "ecmaversion": 2022,
         "sourceType": "module",
@@ -22,5 +22,15 @@
         "es6": true,
         "browser": true,
         "node": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx"]
+            }
+        }
     }
 }
