@@ -8,6 +8,10 @@ const SearchParams = () => {
   const [breed, setBreed] = useState('');
   const [pets, setPets] = useState([]);
   const breeds = [];
+  
+  useEffect(() => {
+    requestPets();
+  }, []);
 
   return (
     <div className="search-params">
